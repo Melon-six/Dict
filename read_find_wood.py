@@ -1,7 +1,8 @@
 import re
+from find_word_dir import get_dir
 
-def extract_word_definition(file_path, search_word):
-    with open(file_path, "r", encoding="gbk") as file:
+def extract_word_definition(search_word):
+    with open(get_dir(search_word), "r", encoding="utf-8") as file:
         text = file.read()
 
     # 使用正则表达式匹配单词及其定义
@@ -14,8 +15,7 @@ def extract_word_definition(file_path, search_word):
         return f"未找到单词 '{search_word}' 的定义。"
 
 # 示例使用
-file_path = "./Dict/A/A-b.txt"  # 你的txt文件路径
 search_word = "about"   # 你要查找的单词
 
-result = extract_word_definition(file_path, search_word)
+result = extract_word_definition(search_word)
 print(result)
