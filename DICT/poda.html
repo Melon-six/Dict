@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .photo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* 设置两列，左边列宽为1，右边列宽为2 */
+            gap: 10px; /* 列与列之间的间距 */
+            line-height: 1.8;
+            border-left: 2px solid #ddd; /* 左侧边框 */
+            border-right: 2px solid #ddd; /* 右侧边框 */
+            padding-left: 10px; /* 左侧内边距，避免与边框挤在一起 */
+            padding-right: 10px; /* 右侧内边距 */
+        }
+        .info p {
+            margin: 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd; /* 细线分隔 */
+        }
+        .info p:last-child {
+            border-bottom: none; /* 最后一行不显示分隔线 */
+        }
+        .info span {
+            font-weight: bold;
+            padding-right: 10px;
+        }
+        .info p:nth-child(odd) {
+            border-right: 1px solid #ddd; /* 左侧列添加右边框 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>个人简历</h1>
+
+        <!-- 一寸照 -->
+        <div class="photo">
+            <img src=""C:\Users\ZhuanZ\Desktop\班级\bi\279150df05409c749318873b44d7ca0d_1.jpg"" alt="一寸照">
+        </div>
+
+        <!-- 个人信息 -->
+        <div class="section">
+            <h2>个人信息</h2>
+            <div class="info">
+                <p><span>姓名:</span> 张三</p>
+                <p><span>性别:</span> 男</p>
+                <p><span>学历:</span> 本科</p>
+                <p><span>专业:</span> 计算机科学与技术</p>
+            </div>
+        </div>
+
+        <!-- 个人简历 -->
+        <div class="section">
+            <h2>个人简历</h2>
+            <p>本人毕业于某知名大学，主修计算机科学与技术专业，具有扎实的编程能力和计算机基础知识。在校期间，参与了多个项目的开发工作，具备较强的团队合作精神和项目管理能力。</p>
+        </div>
+
+        <!-- 特长爱好 -->
+        <div class="section">
+            <h2>特长与爱好</h2>
+            <p>喜欢编程，擅长 Python 和 Java 编程语言。同时，对机器学习和人工智能有浓厚兴趣。业余时间喜欢阅读科技类书籍、游泳和打篮球。</p>
+        </div>
+    </div>
+
+</body>
+</html>
