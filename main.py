@@ -1,12 +1,12 @@
 from fastapi import FastAPI
-from find import search_words
+from word_lookup import find_word_definition
 
 # 创建FastAPI实例
 app = FastAPI()
 
-# 定义一个路由，接收 id 参数并打印
-@app.get("/find/{id}")
-async def print_id(id: str):
-    return {search_words(id)}
-
- 
+# 定义一个路由，接收 word 参数并返回查询结果
+@app.get("/find/{word}")
+async def find_word(word: str):
+    definition = find_word_definition(word)
+    
+    return {"word": word, "definition": definition}
