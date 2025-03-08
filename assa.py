@@ -55,6 +55,8 @@ def fetch_cambridge_definitions(word):
     
     return unique_results if unique_results else None
 
+
+
 # 测试代码
 if __name__ == "__main__":
     word = input("请输入要查询的单词: ")
