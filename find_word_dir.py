@@ -1,6 +1,7 @@
 import os
 import re
 import os
+from assa import get_english_definitions
 
 DICT_ROOT = "DICT/"
 
@@ -30,7 +31,7 @@ def search_words(aim_code):
 
     target_file = get_target_file(aim_code)
     if not target_file:
-        return "no this words!"  # 没有找到合适的文件
+        return get_english_definitions(aim_code)  # 没有找到合适的文件
 
     # 读取文件并查找目标单词
     try:
@@ -41,9 +42,9 @@ def search_words(aim_code):
                 if line == aim_code and i + 1 < len(lines):
                     return lines[i + 1].strip()  # 返回下一个单词的解释
     except FileNotFoundError:
-        return "cannot translate this words!"
+        return get_english_definitions(aim_code)
 
-    return "cannot translate this words!"  # 单词未找到
+    return get_english_definitions(aim_code)  # 单词未找到
 # 测试
 # print(search_words("about"))
 # print(search_words("hallo"))

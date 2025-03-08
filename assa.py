@@ -56,18 +56,16 @@ def fetch_cambridge_definitions(word):
     return unique_results if unique_results else None
 
 
-
-# 测试代码
-if __name__ == "__main__":
-    word = input("请输入要查询的单词: ")
+def get_english_definitions(word):
+    """ 获取英文释义 """
     results = fetch_cambridge_definitions(word)
-    
-    if results:
-        print(f"\n单词 '{word}' 的完整释义:")
-        for entry in results:
-            print(f"\n[{entry['part_of_speech']}]")
-            for idx, definition in enumerate(entry["definitions"], 1):
-                print(f"{idx}. 英文: {definition['en']}")
-                print(f"   中文: {definition['zh']}")
-    else:
-        print(f"未找到单词 '{word}' 的释义。")
+    formatted_string = ""
+    for entry in results:
+        formatted_string += f"Part of Speech: {entry['part_of_speech']}\n"
+        for definition in entry['definitions']:
+            formatted_string += f"  English: {definition['en']}\n  Chinese: {definition['zh']}\n"
+        formatted_string += "\n"
+
+    return formatted_string
+
+
